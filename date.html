@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Problem 1 - Check Date</title>
+    <script>
+      function datecheck(year, month, day){
+        //I am first going to set my start and end dates as variables. I believe this will let me check to make sure they are date objects. I am using just a check to see if it is false to kick out of the function. I am also setting a variable to carry the values put in by the user.
+
+        var date = new Date(year, month, day);
+        var start = new Date(2017,09,01); //I keep getting an error when running this in which my start variable is "undefined". I am unsure why this is happening wben both date and end work fine. 
+        var end = new Date(2017,09,14);
+
+        if (!(start instanceof Date)) {
+          console.log("Start Date is not a date");
+        }
+        if (!(end instanceof Date)){
+          console.log("End Date is not a date");
+        }
+
+        //now that we have verified the date objects, we can create the date array with a while statement
+        var i = start;
+        var array = [];
+
+        while (i <= end) {
+          array.push(i);
+          i++;
+        }
+
+        //we now have an array of all the dates, including the start and end date. we need to now compare the date entered by the user to the array and see if it is included. The easiest way to do that would be to check the first and last value of the array as opposed to checking each individual date in the array. After we do the check, we will want to return the answer as a JSON object.
+
+        if (date >= array[0] || date<=array[array.length-1]) {
+
+          //we need to convert the javascript variable to a JSON string, then save it into a JSON pair with the correct answer
+
+          var data = {
+            "checkdate": JSON.stringify(date),
+            "answer": "True"
+          }
+          console.log(data);
+        }
+        else {
+          var data = {
+            "checkdate": JSON.stringify(date),
+            "answer": "False"
+          }
+          console.log(data);
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+    <h1>Please enter a date (yyyy,mm,dd) into the console by typing datecheck(yourdate). Thank you.</h1>
+  </body>
+</html>
