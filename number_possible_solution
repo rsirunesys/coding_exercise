@@ -14,5 +14,8 @@
     Notes:
     
     When using an IF statement... if you go past 2 levels, then considering using a switch() statement.  Much cleaner.
+    Use camelCase - much easier to read.
+    Except in a loop, and even then sometimes, try not use use single character variable names.  Not description enough.
+    
     
     
