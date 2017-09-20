@@ -4,7 +4,7 @@ Don't use 'date' as a variable name - too dangerous.  In this case use myDate...
 Not sure that Javascript understands 09 as a month... rather just 9
 Instead of start and end... use startDate and endDate... then a reader will know exactly what they're looking at
 Don't use 'array' as a variable name.  In this case use dateArray.
-When you use var i = start... because i is not a date object... you get epoch seconds.  Therefore your subsequent while loop will go on forever.
+When you use i++ you're now getting epoch seconds.  Therefore your subsequent while loop will go on forever.
 Generally I will not use prototyping... a bit too dangerous.  However, I will make exceptions when I come across some nice code.
 
         var myDate = new Date(year, month, day); //****************************** bad name do not use date
