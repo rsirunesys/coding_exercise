@@ -1,0 +1,18 @@
+  	var testNum = 2;					
+  					
+		var myNum = [1,2,3,4];
+		var numWord = ['One','Two','Three','Four'];
+		
+		var idxNum = myNum.indexOf(testNum);
+		
+		if(idxNum > -1){
+			var foundNum = numWord[idxNum];
+		}else{
+			var foundNum = "not found";
+		}
+    
+    Notes:
+    
+    When using an IF statement... if you go past 2 levels, then considering using a switch() statement.  Much cleaner.
+    
+    
